@@ -11,6 +11,8 @@ import Team from './components/Team';
 import Alumni from './components/Alumni';
 import Footer from './components/Footer';
 
+// import ParticleBackground from './ParticleBackground';
+
 import 'swiper/css';
 
 function App() {
@@ -19,8 +21,10 @@ function App() {
       <Navbar />
       <Hero />
       <Carousel />
-      <About/>
+      {/* <About/> */}
       <Team/>
+      <Alumni/>
+      <Footer/>
     </ChakraProvider>
   );
 }
