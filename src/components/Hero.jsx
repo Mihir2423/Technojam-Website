@@ -21,7 +21,7 @@ export default function CallToActionWithAnnotation() {
 
 
 
-      <Box display='flex' flex={1} alignItems={'center'} justifyContent={'flex-start'} padding={'10rem'} alignContent={'center'}>
+      <Box display='flex'  alignItems={'center'} justifyContent={'flex-end'} padding={'10rem'} alignContent={'center'}>
           
           <Stack
             direction={'column'}
