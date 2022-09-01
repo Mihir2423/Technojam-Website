@@ -1,11 +1,10 @@
 // import Head from 'next/head';
 import {
   Box,
-  Heading,
   Text,
   Image,Divider,
   Button,HStack,
-  Stack,Center,VStack
+  VStack
 } from '@chakra-ui/react';
 import {LinkIcon} from '@chakra-ui/icons';
 import logo from '../assets/logo.png';
