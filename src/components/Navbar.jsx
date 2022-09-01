@@ -19,7 +19,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 import logo from '../assets/logo.png';
 
-const Links = ['About', 'Team', 'Contact Us'];
+const Links = ['Events', 'Team', 'Alumni', 'Contact Us'];
 
 const NavLink = ({ children }) => (
   <Link
@@ -27,8 +27,10 @@ const NavLink = ({ children }) => (
     py={1}
     rounded={'md'}
     _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue("#FCE2DB"),
+      // textDecoration: 'none',
+      textColor:'white',
+      // textColor:'rgb(00, 00, 00)',
+      // bg: useColorModeValue("#FCE2DB"),
     }}
     href={'#'}>
     {children}
@@ -42,19 +44,20 @@ export default function Simple() {
     <>
       <Box px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton
+          {/* <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
-          />
+          /> */}
           <HStack  spacing={8} alignItems={'center'}>
             {/* <Box>Logo</Box>  */}
             <Image src={logo} maxHeight='3rem'></Image>
             <HStack
               as={'nav'}
               spacing={4}
+              fontSize={'large'}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
