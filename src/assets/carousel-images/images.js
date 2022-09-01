@@ -1,22 +1,17 @@
-const images = [
-    {
-        img: './assets/carousel-images/1.jpg',
-    },
-    {
-        img: './assets/event-photos/2.JPG',
-    },
-    {
-        img: './assets/event-photos/3.JPG',
-    },
-    {
-        img: './assets/event-photos/4.JPG',
-    },
-    {
-        img: './assets/event-photos/5.JPG',
-    },
-    {
-        img: './assets/event-photos/6.JPG',
-    },
-]
-
-export default images;
+export { default as image1 } from './1.JPG';
+export { default as image2 } from './2.JPG';
+export { default as image3 } from './3.JPG';
+export { default as image4 } from './4.JPG';
+export { default as image5 } from './5.JPG';
+export { default as image6 } from './6.JPG';
+export { default as image7 } from './7.JPG';
+export { default as image8 } from './8.JPG';
+export { default as image9 } from './9.JPG';
+export { default as image10 } from './10.JPG';
+export { default as image11 } from './11.JPG';
+export { default as image12 } from './12.JPG';
+export { default as image13 } from './13.JPG';
+export { default as image14 } from './14.JPG';
+export { default as image15 } from './15.JPG';
+export { default as image16 } from './16.JPG';
+export { default as image17 } from './17.JPG';
