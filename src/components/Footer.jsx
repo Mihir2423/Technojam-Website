@@ -1,101 +1,84 @@
 import React from 'react'
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
 
-import {Center,HStack,VStack,Box,Text,Link} from '@chakra-ui/react'
-import { fontSize } from '@mui/system'
+// icons for the footer
 
-const Logo=require('../assets/logo.png')
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 export default function Footer() {
   return (
-  <>
-      {/* <footer className="p-4 bg-white  shadow md:px-6 md:py-8 dark:bg-gray-900">
-      <div className="sm:flex sm:items-center sm:justify-between">
-        <a href="/" className="flex items-center mb-4 sm:mb-0">
-          <img
-            src={Logo}
-            className="mr-3 h-8"
-            alt="Technojam Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            TechnoJam
-          </span>
-        </a>
-        <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
-              Licensing
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-      <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-        © 2022{" "}
-        <a href="#" className="hover:underline">
-          Technojam
-        </a>
-        . All Rights Reserved.
-      </span>
-    </footer> */}
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="sticky"
+      style={{ background: 'transparent' }}>
+        <Toolbar>
+          <Grid
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="flex-end"
+          className="footer_grid">
+            <Typography variant="h6">
+            Copyright © 2022 Team TechnoJam
+            </Typography>
+            <div style={{ marginLeft: 'auto' }}>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 1 }}
+              >
+                <TwitterIcon />
+              </IconButton>
 
-    <div className='footer-container'>
-      <Box p="5" backgroundColor="white" opacity={0.5} >
-        <Center>
-          <HStack spacing={'20rem'}>
-            <Center>
-              <img height={'100px'} width={'100px'} src={Logo} alt="Technojam Logo" />
-              <Text fontSize={'lg'} fontWeight={'it'}> Copyright &copy; Team TechnoJam 2022</Text>
-            </Center>
-            <Box>
-              <Text fontFamily={'Poppins'} as="u">Socials</Text>
-              <VStack>
-                  <Link href="https://www.linkedin.com/company/technojam/" isExternal>
-                    LinkedIn
-                  </Link>
-                  <Link href="https://www.instagram.com/teamtechnojam/?hl=en" isExternal>
-                    Instagram
-                  </Link>
-                  <Link href="https://www.facebook.com/teamtechnojam" isExternal>
-                    Facebook
-                  </Link>
-              </VStack>
-            </Box>
+                <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+              >
+                <FacebookIcon />
+              </IconButton>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+              >
+                <InstagramIcon />
+              </IconButton>
 
-            <VStack>
-              <Text fontFamily={'Poppins'} as="u">Contact</Text>
-              <Text> 
-                Email - technojam@galgotiasuniversity.edu.in
-              </Text>
-              <Text>
-                Sarthak : +91 9811402220
-              </Text>
-              <Text>
-                Shivansh : +91 9793440595
-              </Text>
-              <Text>
-                Shubhang : +91 7985577877
-              </Text>
-            </VStack>
-          </HStack>
-        </Center>
-      </Box>
-    </div>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+              >
+                <LinkedInIcon />
+              </IconButton>
+            </div>
 
-  </>
+            <div style={{ paddingLeft: '200px', paddingRight: 'auto' }}>
+              <Typography>
+
+                Email us : <a href="mailto:technojam@galgotiasuniversity.edu.in" target="_top">technojam@galgotiasuniversity.edu.in</a>
+              </Typography>
+            </div>
+
+          </Grid>
+        </Toolbar>
+      </AppBar>
+    </Box>
   )
 }

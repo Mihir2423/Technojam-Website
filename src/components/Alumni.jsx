@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React from "react";
 import Users from "../data/past_members";
-import { Center,HStack,Tooltip,Grid,GridItem,Box, Avatar, AvatarBadge, AvatarGroup, Text } from '@chakra-ui/react'
+import { Center,Tooltip,Grid,Box, Avatar, Text } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 
 export default function Team() {
