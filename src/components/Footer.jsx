@@ -6,7 +6,7 @@ export default function Footer() {
 <>
     <footer className="p-4 bg-white  shadow md:px-6 md:py-8 dark:bg-gray-900">
     <div className="sm:flex sm:items-center sm:justify-between">
-      <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
+      <a href="/" className="flex items-center mb-4 sm:mb-0">
         <img
           src={Logo}
           className="mr-3 h-8"

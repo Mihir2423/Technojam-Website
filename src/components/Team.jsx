@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import Users from '../data/presentmem';
+import { HStack,VStack,Box, Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
+
 
 export default function Team() {
     const [page, setPage] = useState(1);
@@ -49,5 +51,10 @@ export default function Team() {
                 </a>
             </div>
         </div>
+        
+        
+        // <HStack>
+        //     <Avatar size="lg" name={Users.name} img={Users.image} />
+        // </HStack>
     )
 }
