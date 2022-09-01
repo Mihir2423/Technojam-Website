@@ -3,19 +3,10 @@ import {
   Flex,
   HStack,
   Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
-  useColorModeValue,
-  Stack,Avatar,
+  Stack,
   Image,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 import logo from '../assets/logo.png';
 
@@ -38,7 +29,7 @@ const NavLink = ({ children }) => (
 );
 
 export default function Simple() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen,} = useDisclosure();
 
   return (
     <>

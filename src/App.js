@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 
 import { ChakraProvider } from '@chakra-ui/react';
 
+
 import Events from './components/Events';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -25,9 +26,9 @@ function App() {
           <Events/>
           <Team/>
           <Alumni/>
-          <Footer/>
         </ChakraProvider>
       </ChakraProvider>
+      <Footer />
     </div>
   );
 }
