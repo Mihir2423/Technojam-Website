@@ -1,6 +1,6 @@
 import React from 'react'
 import Users from '../data/presentmem';
-import { Center,Grid,Box,Tooltip, Avatar, Text } from '@chakra-ui/react'
+import { Center,HStack,Container,Grid,GridItem,Box,Tooltip, Avatar, AvatarBadge, AvatarGroup, Text } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 
 export default function Team() {
@@ -13,6 +13,11 @@ export default function Team() {
     //     e.preventDefault();
     //     setPage(page - 1);
     // }
+    const styles = {
+        padding: '10px',
+        margin: '10px',
+    }
+
     return (
         <>
             <div className="team">
@@ -70,22 +75,26 @@ export default function Team() {
 
             </div>
             
-            <Center>
-                <Grid templateColumns='repeat(10, 1fr)' gap={10}>
-                    {/* <Avatar size="lg" name={Users.name} img={Users.image} /> */}
-                    <Fade bottom>
-                        {Users.map((e) => {
-                            return(
-                                <Tooltip placement={'bottom'} hasArrow label={e.name} bg='white' color='grey.500'>
-                                    <Box p={3}>
-                                    <Avatar showBorder={true} size="xl" name={e.name} src={e.photoUrl} alt={e.name}/>
-                                    </Box>
-                                </Tooltip>
-                            )
-                        },[])}
-                    </Fade>
-                </Grid>
-            </Center>
+            <div className='all-avatars' style={styles}>
+                <Center>
+                    <Container centerContent>
+                        <Grid templateColumns='repeat(10, 1fr)' gap={10}>
+                            {/* <Avatar size="lg" name={Users.name} img={Users.image} /> */}
+                            <Fade bottom>
+                                {Users.map((e) => {
+                                    return(
+                                        <Tooltip placement={'bottom'} hasArrow label={e.name} bg='white' color='grey.500'>
+                                            <Box p={3}>
+                                            <Avatar showBorder={true} size="xl" name={e.name} src={e.photoUrl} alt={e.name}/>
+                                            </Box>
+                                        </Tooltip>
+                                    )
+                                },[])}
+                            </Fade>
+                        </Grid>
+                    </Container>
+                </Center>
+            </div>
             
         </>
     )
