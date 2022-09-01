@@ -42,6 +42,9 @@
     }
 }
 
+*{
+	max-height: fit-content;
+}
 
 .carousel {
 	margin-left: 75px;

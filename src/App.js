@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {Switch, Route} from 'react-router-dom';
 
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider,Wrap } from '@chakra-ui/react';
 
 import Events from './components/Events';
 import Navbar from './components/Navbar';
@@ -16,18 +16,21 @@ import 'swiper/css';
 function App() {
   return (
     <div className='wrapper'>
-      <ChakraProvider>
+      <Wrap>
         <ChakraProvider>
-          <Navbar />
+          <ChakraProvider>
+            <Navbar />
+          </ChakraProvider>
+          <ChakraProvider>
+            <Hero />
+            <Events/>
+            <Team/>
+            <Alumni/>
+            <Footer/>
+          </ChakraProvider>
         </ChakraProvider>
-        <ChakraProvider>
-          <Hero />
-          <Events/>
-          <Team/>
-          <Alumni/>
-          <Footer/>
-        </ChakraProvider>
-      </ChakraProvider>
+      </Wrap>
+
     </div>
   );
 }

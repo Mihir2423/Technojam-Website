@@ -54,12 +54,13 @@ export default function Footer() {
     </footer> */}
 
     <div className='footer-container'>
-      <Box h={'5%'} w={'100%'} p="5" backgroundColor="white" opacity={0.5} >
+      <Box p="5" backgroundColor="white" opacity={0.5} >
         <Center>
-          <HStack spacing={'40rem'}>
-            <Box>
+          <HStack spacing={'20rem'}>
+            <Center>
               <img height={'100px'} width={'100px'} src={Logo} alt="Technojam Logo" />
-            </Box>
+              <Text fontSize={'lg'} fontWeight={'it'}> Copyright &copy; Team TechnoJam 2022</Text>
+            </Center>
             <Box>
               <Text fontFamily={'Poppins'} as="u">Socials</Text>
               <VStack>
@@ -81,13 +82,13 @@ export default function Footer() {
                 Email - technojam@galgotiasuniversity.edu.in
               </Text>
               <Text>
-                Sarthak - +91 9811402220
+                Sarthak : +91 9811402220
               </Text>
               <Text>
-                Shivansh - +91 9793440595
+                Shivansh : +91 9793440595
               </Text>
               <Text>
-                Shubhang - +91 7985577877
+                Shubhang : +91 7985577877
               </Text>
             </VStack>
           </HStack>
