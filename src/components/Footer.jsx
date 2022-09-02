@@ -1,84 +1,49 @@
-import React from 'react'
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-
-// icons for the footer
-
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import {
+  ButtonGroup,
+  Container,
+  IconButton,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import * as React from "react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Logo from "../assets/logo.png";
 
 export default function Footer() {
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky"
-      style={{ background: 'transparent' }}>
-        <Toolbar>
-          <Grid
-          container
-          direction="row"
-          justify="flex-start"
-          alignItems="flex-end"
-          className="footer_grid">
-            <Typography variant="h6">
-            Copyright © 2022 Team TechnoJam
-            </Typography>
-            <div style={{ marginLeft: 'auto' }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 1 }}
-              >
-                <TwitterIcon />
-              </IconButton>
-
-                <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-              >
-                <FacebookIcon />
-              </IconButton>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-              >
-                <InstagramIcon />
-              </IconButton>
-
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-              >
-                <LinkedInIcon />
-              </IconButton>
-            </div>
-
-            <div style={{ paddingLeft: '200px', paddingRight: 'auto' }}>
-              <Typography>
-
-                Email us : <a href="mailto:technojam@galgotiasuniversity.edu.in" target="_top">technojam@galgotiasuniversity.edu.in</a>
-              </Typography>
-            </div>
-
-          </Grid>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  )
+  <Container
+    as="footer"
+    role="contentinfo"
+    py={{ base: "12", md: "16" }}
+    bg="red"
+  >
+    <Stack spacing={{ base: "4", md: "5" }}>
+      <Stack justify="space-between" direction="row" align="center">
+        <Logo />
+        <ButtonGroup variant="ghost">
+          <IconButton
+            as="a"
+            href="#"
+            aria-label="LinkedIn"
+            icon={<FaLinkedin fontSize="1.25rem" />}
+          />
+          <IconButton
+            as="a"
+            href="#"
+            aria-label="GitHub"
+            icon={<FaGithub fontSize="1.25rem" />}
+          />
+          <IconButton
+            as="a"
+            href="#"
+            aria-label="Twitter"
+            icon={<FaTwitter fontSize="1.25rem" />}
+          />
+        </ButtonGroup>
+      </Stack>
+      <Text fontSize="sm" color="subtle">
+        &copy; {new Date().getFullYear()} Chakra UI Pro, Inc. All rights
+        reserved.
+      </Text>
+    </Stack>
+  </Container>;
 }
