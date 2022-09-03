@@ -52,6 +52,7 @@ export default function CallToActionWithAnnotation() {
                   <Text variant={'2xl'} color="grey.500">Register</Text>
                 </Button>
               </Fade>
+              
                 
             </Box>
             <Box>
@@ -68,7 +69,20 @@ export default function CallToActionWithAnnotation() {
               </Fade>
             </Box>
           </HStack>
+          <Box marginTop={2}>
+          <Fade left>
+          <HStack>
+            <div class="mockup-code shadow-xl">
+            <pre data-prefix="$"><code>npm i TechnoJam</code></pre> 
+            <pre data-prefix=">" class="text-warning"><code>throttling...</code></pre> 
+            <pre data-prefix=">" class="text-success"><code>Done💥!</code></pre>
+              </div>
+            </HStack>
+            </Fade>
+          </Box>
+          
 
       </Box >
+       
   );
 }
