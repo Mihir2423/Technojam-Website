@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Box, Center, Image, Text } from "@chakra-ui/react";
+import { Box, Center, Image, Text, AspectRatio } from "@chakra-ui/react";
 
 import image1 from "../assets/carousel-images/1.jpg";
 import image2 from "../assets/carousel-images/2.jpg";
@@ -29,6 +29,27 @@ export default function Events() {
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          dots: false
+        }
+      },
+    ]
   };
 
   const imageList = [
@@ -52,7 +73,7 @@ export default function Events() {
   ];
 
   return (
-    <>
+    <Box overflow={'hidden'}>
       <Center>
         <Text
           bgGradient="linear(to-l, #7928CA, #FF0080)"
@@ -65,20 +86,19 @@ export default function Events() {
         </Text>
       </Center>
 
-      <Box mb="8">
+      <Box mb="8" h="100%">
         <Slider {...settings}>
           {imageList.map((item, index) => (
-            <Image
-              src={item}
-              alt=""
-              px={"20"}
-              width="1440px"
-              height="810px"
-              key={index}
-            />
+            <AspectRatio key={index} ratio={16 / 9}>
+              <Image
+                src={item}
+                alt=""
+                px={"20"}
+              />
+            </AspectRatio>
           ))}
         </Slider>
       </Box>
-    </>
+    </Box>
   );
 }
