@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Users from '../data/presentmem';
-import { Center,HStack,Container,Grid,GridItem,Box,Tooltip, Avatar, AvatarBadge, AvatarGroup, Text } from '@chakra-ui/react'
+import { Center, Container, Grid, Box, Tooltip, Avatar, Text } from '@chakra-ui/react';
 import Fade from 'react-reveal/Fade';
 
 export default function Team() {
@@ -16,24 +16,24 @@ export default function Team() {
     const styles = {
         padding: '10px',
         margin: '10px',
-    }
+    };
 
     return (
         <>
             <div className="team">
-                    <Center>
-                        <Fade bottom>
-                            <Text
-                                bgGradient='linear(to-l, #7928CA, #FF0080)'
-                                bgClip='text'
-                                fontSize='5xl'
-                                fontWeight='extrabold'
-                                mb={4}
-                            >
-                                Team
-                            </Text>
-                        </Fade>
-                    </Center>
+                <Center>
+                    <Fade bottom>
+                        <Text
+                            bgGradient='linear(to-l, #7928CA, #FF0080)'
+                            bgClip='text'
+                            fontSize='5xl'
+                            fontWeight='extrabold'
+                            mb={4}
+                        >
+                            Team
+                        </Text>
+                    </Fade>
+                </Center>
                 {/* <div id="themes-section" className=" grid md:grid-cols-3 md:gap-x-12 md:gap-y-8 grid-cols-1 gap-y-6 justify-items-center items-center md:justify-center lg:px-[50px] pt-8 lg:px-[200px]">
                 
                     
@@ -74,7 +74,7 @@ export default function Team() {
 
 
             </div>
-            
+
             <div className='all-avatars' style={styles}>
                 <Center>
                     <Container centerContent>
@@ -82,20 +82,20 @@ export default function Team() {
                             {/* <Avatar size="lg" name={Users.name} img={Users.image} /> */}
                             <Fade bottom>
                                 {Users.map((e) => {
-                                    return(
+                                    return (
                                         <Tooltip placement={'bottom'} hasArrow label={e.name} bg='white' color='grey.500'>
                                             <Box p={3}>
-                                            <Avatar showBorder={true} size="xl" name={e.name} src={e.photoUrl} alt={e.name}/>
+                                                <Avatar showBorder={true} size="xl" name={e.name} src={e.photoUrl} alt={e.name} />
                                             </Box>
                                         </Tooltip>
-                                    )
-                                },[])}
+                                    );
+                                }, [])}
                             </Fade>
                         </Grid>
                     </Container>
                 </Center>
             </div>
-            
+
         </>
-    )
+    );
 }
