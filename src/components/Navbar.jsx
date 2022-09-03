@@ -1,95 +1,91 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Link,
-  useDisclosure,
-  Stack,
-  Image,
-} from '@chakra-ui/react';
+import React from "react";
+import '../App.css';
 
-import logo from '../assets/logo.png';
-
-const Links = ['Events', 'Team', 'Alumni', 'Contact Us'];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      // textDecoration: 'none',
-      textColor:'white',
-      // textColor:'rgb(00, 00, 00)',
-      // bg: useColorModeValue("#FCE2DB"),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
-
-export default function Simple() {
-  const { isOpen,} = useDisclosure();
-
+export default function NavLink() {
   return (
     <>
-      <Box px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          {/* <IconButton
-            size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          /> */}
-          <HStack  spacing={8} alignItems={'center'}>
-            {/* <Box>Logo</Box>  */}
-            <Image src={logo} maxHeight='3rem'></Image>
-            <HStack
-              as={'nav'}
-              spacing={4}
-              fontSize={'large'}
-              display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </HStack>
-          </HStack>
-          {/* <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
+      <div className="navbar bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-60 " >
+        <div className="navbar-start ">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h8m-8 6h16"
                 />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex> */}
-        </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
-      </Box>
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>About us</a>
+              </li>
+              <li tabIndex={0}>
+                <a className="justify-between">
+                  Parent
+                  <svg
+                    className="fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                  </svg>
+                </a>
+                <ul className="p-2">
+                  <li>
+                    <a>Submenu 1</a>
+                  </li>
+                  <li>
+                    <a>Submenu 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>Item 3</a>
+              </li>
+            </ul>
+          </div>
+            <div className=''><img src="https://i.postimg.cc/XN8vQBcv/logo.png" alt="logo" className='w-[55px] ml-5'/></div>
+        </div>
+        <div className="navbar-center hidden lg:flex bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 ">
+          <ul className="menu menu-horizontal p-0">
+            <li>
+              <a>About Us</a>
+            </li>
+            <li tabIndex={0}>
+              <a>
+                Motivation
+              </a>
+            </li>
+            <li>
+              <a>Contact us</a>
+            </li>
+            <li>
+              <a>Alumni</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div className="navbar-end">
+              <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-1 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  Register
+              </span>
+            </button>
+        </div>
+      </div>
     </>
   );
 }
