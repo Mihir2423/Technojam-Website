@@ -86,8 +86,8 @@ export default function Events() {
         </Text>
       </Center>
 
-      <Box mb="8" h="100%">
-        <Slider {...settings}>
+      <Box mb="8" >
+        <Slider {...settings} >
           {imageList.map((item, index) => (
             <AspectRatio key={index} ratio={16 / 9}>
               <Image
