@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.png";
-import { Box, AppBar, Toolbar, Typography, Grid, IconButton,TwitterIcon,FacebookIcon,InstagramIcon,LinkedInIcon } from "@material-ui/core";
+import { Box, AppBar, Toolbar, Typography, Grid, IconButton } from "@material-ui/core";
+import {TwitterIcon,FacebookIcon,InstagramIcon,LinkedInIcon} from '@mui/icons-material';
 
 export default function Footer() {
   return (
