@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky"
-      style={{ background: 'transparent' }}>
+      style={{ background: 'transparent' , justifyContent: 'center' }}>
         <Toolbar>
           <Grid
           container

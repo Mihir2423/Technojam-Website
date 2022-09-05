@@ -85,13 +85,13 @@ export default function Team() {
 
 
       <Center>
-          <Grid templateColumns='repeat(10, 1fr)' gap={5}>
+          <Grid templateColumns='repeat(10, 1fr)' gap={10}>
             <Fade bottom>
               {Users.map((e) => {
                   return(
                     <Tooltip hasArrow label={e.name} bg='transparent' color='grey.500'>
                       <Box p={3}>
-                        <Avatar showBorder={true} borderColor={'teal'} size="xl" name={e.name} src={e.photo} />
+                        <Avatar showBorder={true} borderColor={'teal'} size="md" name={e.name} src={e.photo} />
                       </Box>
                     </Tooltip>
                 )},[])}

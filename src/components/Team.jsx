@@ -85,7 +85,7 @@ export default function Team() {
                                     return(
                                         <Tooltip placement={'bottom'} hasArrow label={e.name} bg='white' color='grey.500'>
                                             <Box p={3}>
-                                            <Avatar showBorder={true} size="xl" name={e.name} src={e.photoUrl} alt={e.name}/>
+                                            <Avatar showBorder={true} size="md" name={e.name} src={e.photoUrl} alt={e.name}/>
                                             </Box>
                                         </Tooltip>
                                     )

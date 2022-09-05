@@ -19,7 +19,8 @@ export default function CallToActionWithAnnotation() {
         backgroundSize={'contain'}
         backgroundPosition={'center'}
         // height={'100vh'}
-        w='100%' p={'5rem'}
+        p={'5rem'}
+        width='full'
       >
 
           <HStack spacing={'10rem'}>

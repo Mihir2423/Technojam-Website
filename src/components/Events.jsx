@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Box, Center, Image, Text } from '@chakra-ui/react';
+import { Box, Center, Image, Text, AspectRatio } from '@chakra-ui/react';
 
 import image1 from '../assets/carousel-images/1.jpg';
 import image2 from '../assets/carousel-images/2.jpg';
@@ -29,12 +29,13 @@ export default function Events() {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 2000,
-        cssEase: "linear"
+        cssEase: "linear",
+        fade: true,
     };
 
     const imageList = [
         image1,
-        image2,
+        // image2,
         image3,
         image4,
         image5,
@@ -60,25 +61,33 @@ export default function Events() {
                     bgClip='text'
                     fontSize='7xl'
                     fontWeight='extrabold'
-                    mb={4}
+                    // mb={4}
                 >
                     Events
                 </Text>
+
+
+
+                
             </Center>
 
-            <Box mb='8'>
-                <Slider {...settings}>
-                    {imageList.map((item, index) => (
-                        <Image
-                            src={item} alt=""
-                            px={'20'}
-                            width='1440px'
-                            height='810px'
-                            key={index}
-                        />
-                    ))}
-                </Slider>
-            </Box>
+            
+            <center>
+                <Box alignItems={'center'} justifyContent={'center'}>
+                    <AspectRatio maxH='100%' maxW='75%' ratio={1}>
+                        <Slider {...settings}>
+                            {imageList.map((item, index) => (
+                                <Image
+                                    src={item} alt=""
+                                    px={'20'}
+                                    key={index}
+                                />
+                            ))}
+                        </Slider>
+                    </AspectRatio>
+                </Box>
+            </center>
+            
         </>
     );
 }
