@@ -3,17 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&display=swap');
 
 
-.footer-container{
-	/* From https://css.glass */
-	/* From https://css.glass */
-	background: rgba(255, 255, 255, 0.08);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(11.4px);
-	-webkit-backdrop-filter: blur(11.4px);
+.navbar{
+	font-family: 'Roboto Condensed', sans-serif;
 }
-
 .wrapper{
 	/* background: linear-gradient(22deg, rgba(224,225,246,1) 20%, rgba(203,241,252,1) 38%, rgba(165,211,234,1) 60%, rgba(227,217,252,1) 81%);; */
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);

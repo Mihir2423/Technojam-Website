@@ -1,17 +1,6 @@
-import React from 'react'
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-
-// icons for the footer
-
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import React from "react";
+import Logo from "../assets/logo.png";
+import { Box, AppBar, Toolbar, Typography, Grid, IconButton,TwitterIcon,FacebookIcon,InstagramIcon,LinkedInIcon } from "@material-ui/core";
 
 export default function Footer() {
   return (
