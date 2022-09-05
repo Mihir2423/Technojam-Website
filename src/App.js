@@ -27,10 +27,14 @@ function App() {
             <Events/>
             <Team/>
             <Alumni/>
+            
+          </ChakraProvider>
+          <ChakraProvider>
+            <Footer/>
           </ChakraProvider>
         </ChakraProvider>
       </Wrap>
-      <Footer/>
+      
 
 
     </div>
