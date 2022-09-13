@@ -20,7 +20,7 @@ export default function Team() {
 
     return (
         <>
-            <div className="team px-6">
+            <div className="team px-6" id="team">
                 <Center>
                     <Fade bottom>
                         <Text
