@@ -73,7 +73,8 @@ export default function Events() {
   ];
 
   return (
-    <Box overflow={'hidden'}>
+    <Box overflow={'hidden'}
+    id="events">
       <Center>
         <Text
           bgGradient="linear(to-l, #7928CA, #FF0080)"
