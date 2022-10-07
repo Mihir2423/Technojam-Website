@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css';
-
+import { Link } from "react-scroll"
 export default function NavLink() {
   return (
     <>
@@ -57,33 +57,39 @@ export default function NavLink() {
               </li>
             </ul>
           </div>
-            <div className=''><img src="https://i.postimg.cc/XN8vQBcv/logo.png" alt="logo" className='w-[55px] ml-5'/></div>
+          <div className=''><img src="https://i.postimg.cc/XN8vQBcv/logo.png" alt="logo" className='w-[55px] ml-5' /></div>
         </div>
         <div className="navbar-center hidden lg:flex bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 ">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <a>About Us</a>
+              <Link to="hero" className="Link" spy={true} smooth={true} offset={50} duration={500}>
+                Home
+              </Link>
             </li>
             <li tabIndex={0}>
-              <a>
-                Motivation
-              </a>
+              <Link to="events" className="Link" spy={true} smooth={true} offset={50} duration={500}>
+                Events
+              </Link>
             </li>
             <li>
-              <a>Contact us</a>
+              <Link to="team" className="Link" spy={true} smooth={true} offset={50} duration={500}>
+                Team
+              </Link>
             </li>
             <li>
-              <a>Alumni</a>
+              <Link to="alumni" className="Link" spy={true} smooth={true} offset={50} duration={500}>
+                Our Alumni
+              </Link>
             </li>
-            
+
           </ul>
         </div>
         <div className="navbar-end">
-              <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-1 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Register
-              </span>
-            </button>
+          <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-1 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              Register
+            </span>
+          </button>
         </div>
       </div>
     </>

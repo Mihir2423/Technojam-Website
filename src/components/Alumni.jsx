@@ -68,8 +68,8 @@ export default function Team() {
     // </div>
 
 
-    <>
-      <Center>
+    <div>
+      <Center id="alumni">
         <Fade bottom>
           <Text
             bgGradient='linear(to-l, #7928CA, #FF0080)'
@@ -98,6 +98,6 @@ export default function Team() {
             </Fade>
           </Grid>
       </Center>
-    </>
+    </div>
   );
 }
